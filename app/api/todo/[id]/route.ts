@@ -36,18 +36,18 @@ export const PUT = async (req: NextRequest, { params }: { params: { id: string }
 
 }
 
-export const DELETETODOS = async (req: NextRequest, { params }: { params: { id: string } }) => {
-    try {
-        const { id } = params
-        console.log(params)
-        await connectDB()
-        const result = await Todo.findByIdAndDelete(id)
+// export const DELETETODOS = async (req: NextRequest, { params }: { params: { id: string } }) => {
+//     try {
+//         const { id } = params
+//         console.log(params)
+//         await connectDB()
+//         const result = await Todo.findByIdAndDelete(id)
 
-        return NextResponse.json({
-            message: "todo delete success",
-            result
-        }, { status: 200 })
-    } catch (error: any) {
-        return NextResponse.json({ message: error.message }, { status: 500 })
-    }
-}
+//         return NextResponse.json({
+//             message: "todo delete success",
+//             result
+//         }, { status: 200 })
+//     } catch (error: any) {
+//         return NextResponse.json({ message: error.message }, { status: 500 })
+//     }
+// }
