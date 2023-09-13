@@ -36,7 +36,7 @@ export const PUT = async (req: NextRequest, { params }: { params: { id: string }
 
 }
 
-export const DELETETODOS = async (req: NextApiHandler, { params }: { params: { id: string } }) => {
+export const DELETETODOS = async (req: NextRequest, { params }: { params: { id: string } }) => {
     try {
         const { id } = params
         console.log(params)
