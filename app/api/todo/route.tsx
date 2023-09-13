@@ -17,7 +17,7 @@ export const POST = async (req: NextRequest) => {
         return NextResponse.json({ message: error.message }, { status: 500 })
     }
 }
-export const GET = async (req: NextResponse) => {
+export const GET = async (req: NextRequest) => {
     try {
         await connectDB()
         const result = await Todo.find()
