@@ -44,7 +44,7 @@ const TodoTable = () => {
     }, [])
     return <>
         {
-            allTodos.map(item => <div className='flex gap-5'>
+            allTodos.map(item => <div className='flex gap-5' key={item._id}>
                 <h1>{item.task}</h1>
                 <button >Delete</button>
             </div>)
