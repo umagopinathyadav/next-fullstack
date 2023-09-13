@@ -1,10 +1,10 @@
 import { connectDB } from "@/lib/mongo";
 import Todo from "@/models/Todo";
 import { NextApiRequest } from "next";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
-export const POST = async (req: NextResponse) => {
+export const POST = async (req: NextRequest) => {
     try {
         // console.log(await req.json());
         const todoData = await req.json()
